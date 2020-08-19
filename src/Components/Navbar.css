@@ -1,0 +1,59 @@
+.LOGO{
+    font-size: xx-large;
+    font-weight: bold;
+    font-family:Curlz MT
+
+}
+.nav-item{
+    cursor: pointer;
+    display:inline-block;
+    width:70px;
+    transition:width 0.5s
+
+
+}
+.nav-item:hover{
+    background-color: cadetblue;
+    opacity: .8;
+    width:80px;
+    transition-delay: 100ms;
+    transition-timing-function: ease-out;
+
+
+}
+#img{
+    width:80px;
+    
+
+}
+#img1{
+    float:right;
+    
+
+}
+
+.list{
+    
+    list-style-type: none;
+}
+.top{
+    background-color: bisque;
+   display: flex;
+    
+    
+}
+.button{
+    font-size: medium;
+    font-weight: bold;
+    display: none;
+}
+@media screen and (max-width:400px){
+    .button{
+        display: inline;
+    }
+}
+.nav{
+    
+    display:flex;
+    
+}

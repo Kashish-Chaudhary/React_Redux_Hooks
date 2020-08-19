@@ -1,38 +1,250 @@
-.App {
-  text-align: center;
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header{
+  background-image: url('./images/b.jfif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position:relative;
+  height:200px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.overlay{
+  position: absolute;
+ 
+  top: 0;
+  left: 0;
+  height:100%;
+  right:0;
+  bottom:0;
+  padding:0 !important;
+  margin:0 !important;
+  background-color: rgba(10,10,10,0.4);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav li{
+  list-style-type: none;
+  display:inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+ 
+  
+  
+}
+nav{
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right:0;
+  z-index: 2;
+  bottom:0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding:50px 60px 0 60px;
+
+}
+
+header nav h2{
+  font-size: 3em;
+  font-family: Curlz MT;
+
+}
+.cart ion-icon{
+  vertical-align: bottom;
+  font-size: 20px;
+  padding-right: 5px;
+}
+li{
+  margin-left:10px;
+  border-radius: 8%;
+}
+.cart {
+  background-color: rgb(30, 75, 209);
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  
+}
+.container,.container-products{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding-bottom: 100px;
+
+}
+.image{
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  overflow: hidden;
+    width: auto;
+    height: auto;
+   
+}
+li a{
+  text-decoration: none;
+  color:white
+}
+.addToCart{
+  color: black;
+  position: relative;
+  width:100%;
+  background-color: darkgrey;
+  transition: all ease-in-out  ;
+  opacity:0;
+  cursor: pointer;
+  text-align: center;
+} 
+.image:hover .cart1,
+.image:hover .cart2,
+.image:hover .cart3,
+.image:hover .cart4{
+  bottom:85px;
+  opacity:1;
+  padding:10px;
+  text-decoration: none;
+  
+}
+.container-products{
+  max-width:650px;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.container-products ion-icon{
+  font-size: 25px;
+  color: blue;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.product-header{
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 4px solid lightgray;
+  margin:0 auto;
+}
+.product-title{
+  width: 45%;
+}
+.price{
+  width: 15%;
+  border-bottom:1px solid lightgray ;
+  display: flex;
+  align-items: center;
+}
+.quantity{
+  width: 30%;
+  border-bottom:1px solid lightgray ;
+  display: flex;
+  align-items: center;
+
+}
+.total{
+  width: 10%;
+  border-bottom:1px solid lightgray ;
+  display: flex;
+  align-items: center;
+}
+.product{
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  border-bottom:1px solid lightgray ;
+  align-items: center;
+  padding:10px 0;
+}
+.product ion-icon{
+  cursor: pointer;
+}
+.products{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.products img{
+  width:75px;
+}
+.basketTotalContainer{
+  width: 100%;
+  display: flex;
+
+  justify-content: flex-end;
+ padding: 10px 0;
+ 
+
+}
+.basketTotalTitle{
+  width: 100%;
+}
+.basketTotal{
+  width: 30%;
+}
+@media (max-width:500px){
+  header nav h2{
+        /* width:100%; */
+        font-size: 2em ;
+        /* text-align: center; */
+        /* margin-bottom: 10px; */
+
+  }
+  .sm-hide{
+    display:none;
+  }
+
+  .products,
+  .product-header{
+    justify-content: center;
+  }
+  .basketTotalContainer{
+    padding-right: 8%;
+  }
+
+}
+@media (max-width:615px){
+  ul{
+        display:flex;
+        flex-direction: column;
+        
+        
+        /* flex-wrap: ; */
+        /* text-align: center; */
+        /* margin-bottom: 10px; */
+
+  }
+  ul li{
+    margin-top: 5px;
+  }
+}
+@media (max-width:430px){
+
+ 
+  ul li{
+    margin-top: 5px;
+    font-size: 0.5em ;
+  }
+  ion-icon {
+    font-size: 10px;
+    width: 50%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width:310px){
+header nav h2{
+  display:none;
+}
 }
